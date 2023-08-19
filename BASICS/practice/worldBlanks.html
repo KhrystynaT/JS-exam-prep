@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Word Blanks Game</title>
+  </head>
+  <body>
+    <h1>Word Blanks Game</h1>
+    <p>Complete the sentence:</p>
+    <p id="sentence"></p>
+    <input type="text" id="noun" placeholder="Enter a noun" />
+    <input type="text" id="verb" placeholder="Enter a verb" />
+    <input type="text" id="adjective" placeholder="Enter an adjective" />
+    <input type="text" id="adverb" placeholder="Enter an adverb" />
+    <button onclick="generateSentence()">Generate Sentence</button>
+    <p id="result"></p>
+
+    <script>
+      function generateSentence() {
+        var noun = document.getElementById("noun").value;
+        var verb = document.getElementById("verb").value;
+        var adjective = document.getElementById("adjective").value;
+        var adverb = document.getElementById("adverb").value;
+
+        var sentence =
+          "The " +
+          adjective +
+          " " +
+          noun +
+          " " +
+          adverb +
+          " " +
+          verb +
+          " to the store.";
+        document.getElementById("sentence").textContent = sentence;
+
+        var result = "You created this sentence: " + sentence;
+        document.getElementById("result").textContent = result;
+      }
+    </script>
+  </body>
+</html>
