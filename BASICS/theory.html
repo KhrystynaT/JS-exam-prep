@@ -54,5 +54,40 @@
     <p>
       Check out the <a href="./practice/worldBlanks.html"> Word Blanks Game</a>
     </p>
+    <hr />
+    <h3>JavaScript Array Methods</h3>
+    <p><a href="./practice/array-methods.html">Click here to see</a></p>
+    <hr />
+    <h3>Shopping list (nested arrays)</h3>
+    <ul id="shopping-list"></ul>
+    <!-- New <ul> element for the shopping list -->
+
+    <script>
+      var shoppingList = [
+        ["Apples", 5],
+        ["Bananas", 10],
+        ["Milk", 2],
+        ["Bread", 1],
+        ["Eggs", 1],
+      ];
+
+      var listElement = document.getElementById("shopping-list");
+
+      function displayShoppingList() {
+        listElement.innerHTML = ""; // Clear the list
+
+        for (var i = 0; i < shoppingList.length; i++) {
+          var item = shoppingList[i];
+          var itemName = item[0];
+          var itemCount = item[1];
+
+          var listItem = document.createElement("li");
+          listItem.textContent = itemName + " - " + itemCount;
+          listElement.appendChild(listItem);
+        }
+      }
+
+      displayShoppingList();
+    </script>
   </body>
 </html>

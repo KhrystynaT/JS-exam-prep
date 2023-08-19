@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Array Methods Example</title>
+  </head>
+  <body>
+    <h1>JavaScript Array Methods</h1>
+
+    <p>
+      Click the buttons to see how <code>push</code>, <code>pop</code>,
+      <code>shift</code>, and <code>unshift</code> work:
+    </p>
+
+    <button onclick="pushExample()">Push</button>
+    <button onclick="popExample()">Pop</button>
+    <button onclick="shiftExample()">Shift</button>
+    <button onclick="unshiftExample()">Unshift</button>
+
+    <p id="output"></p>
+
+    <script>
+      // Initial array
+      var fruits = ["Apple", "Banana", "Cherry", "Date"];
+
+      function displayFruits() {
+        document.getElementById("output").textContent =
+          "Fruits: " + fruits.join(", ");
+      }
+
+      function pushExample() {
+        fruits.push("Elderberry");
+        displayFruits();
+      }
+
+      function popExample() {
+        var removedFruit = fruits.pop();
+        displayFruits();
+        alert("Removed: " + removedFruit);
+      }
+
+      function shiftExample() {
+        var removedFruit = fruits.shift();
+        displayFruits();
+        alert("Removed: " + removedFruit);
+      }
+
+      function unshiftExample() {
+        fruits.unshift("Grape");
+        displayFruits();
+      }
+
+      // Initial display
+      displayFruits();
+    </script>
+  </body>
+</html>
