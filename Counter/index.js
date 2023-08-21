@@ -11,8 +11,8 @@ function increment() {
 
 // create a function, save(), which logs out the count when its called
 function save() {
-  let entry = count + "-";
-  saveEl.innerText += entry;
+  let entry = " " + count + " - ";
+  saveEl.textContent += entry;
 
   console.log(count);
 }
