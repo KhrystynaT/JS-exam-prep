@@ -13,6 +13,7 @@ function increment() {
 function save() {
   let entry = " " + count + " - ";
   saveEl.textContent += entry;
-
+  countEl.textContent = 0;
+  count = 0;
   console.log(count);
 }
