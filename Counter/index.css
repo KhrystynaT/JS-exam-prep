@@ -1,0 +1,62 @@
+body {
+  background-image: linear-gradient(
+    45deg,
+    lightpink 25%,
+    transparent 25%,
+    transparent 75%,
+    darkcyan 75%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+  font-weight: bold;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  body {
+    font-size: 20px; /* Larger font size for big screens */
+  }
+}
+.glass-style {
+  background-image: linear-gradient(
+    45deg,
+    darkcyan 5%,
+    /* Start with darkcyan */ transparent 5%,
+    transparent 95%,
+    lightpink 95% /* End with lightpink */
+  );
+  backdrop-filter: blur(5px); /* Apply a blur effect */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px;
+  width: 300px; /* Adjust width as needed */
+  margin: 0 auto; /* Center the div horizontally */
+  border: solid 1px cadetblue;
+}
+h1 {
+  margin: 10px auto;
+}
+h2 {
+  font-size: 50px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+button {
+  border: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  font-weight: bold;
+  width: 150px;
+  margin-bottom: 5px;
+  border-radius: 8px;
+}
+#increment-btn {
+  background: lightpink;
+}
+#save-btn {
+  background: darkcyan;
+}
