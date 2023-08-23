@@ -112,6 +112,12 @@
     </p>
 
     <script>
+      const sum = (function () {
+        return function sum(...args) {
+          return args.reduce((a, b) => a + b, 0);
+        };
+      })();
+      console.log(sum(1, 2, 3));
       const increment = (function () {
         return function increment(number, value = 1) {
           return number + value;
