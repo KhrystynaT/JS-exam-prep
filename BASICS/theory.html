@@ -60,8 +60,15 @@
     <hr />
     <h3>Shopping list (nested arrays)</h3>
     <ul id="shopping-list"></ul>
-    <!-- New <ul> element for the shopping list -->
-
+    <br />
+    <h3>Objects</h3>
+    <p>
+      Objects in JavaScript are data structures that store information as
+      key-value pairs. They're created using `{}`, hold properties and methods,
+      and can be nested. Properties can be added, accessed, and removed, and
+      objects can inherit from prototypes. JSON is a format based on object
+      notation.
+    </p>
     <script>
       var shoppingList = [
         ["Apples", 5],
@@ -88,6 +95,20 @@
       }
 
       displayShoppingList();
+      // Creating an object using object literal notation
+      const person = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 30,
+        greet: function () {
+          console.log(`Hello, my name is ${this.firstName} ${this.lastName}.`);
+        },
+      };
+
+      // Accessing properties and calling a method
+      console.log(person.firstName); // Output: John
+      console.log(person.age); // Output: 30
+      person.greet(); // Output: Hello, my name is John Doe.
     </script>
   </body>
 </html>
