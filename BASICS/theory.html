@@ -61,6 +61,7 @@
     <h3>Shopping list (nested arrays)</h3>
     <ul id="shopping-list"></ul>
     <br />
+    <hr />
     <h3>Objects</h3>
     <p>
       Objects in JavaScript are data structures that store information as
@@ -69,11 +70,56 @@
       objects can inherit from prototypes. JSON is a format based on object
       notation.
     </p>
-    <br />
+    <hr />
 
     <h3>Ternary Operator</h3>
     <p>condition ? expression_if_true : expression_if_false;</p>
+    <br />
+    <hr />
+    <h3>let vs var</h3>
+    <p>
+      <code>var</code> and <code>let</code> are used to declare variables in
+      JavaScript.
+    </p>
+
+    <h4>Scope:</h4>
+    <p>
+      <code>var</code>: Function-scoped, accessible throughout the function.
+    </p>
+    <p><code>let</code>: Block-scoped, limited to the block where declared.</p>
+
+    <h4>Hoisting:</h4>
+    <p>
+      <code>var</code>: Hoisted and initialized with <code>undefined</code>.
+    </p>
+    <p><code>let</code>: Hoisted but remains in the Temporal Dead Zone.</p>
+
+    <h4>Redeclaration:</h4>
+    <p><code>var</code>: Allows redeclaration within the same scope.</p>
+    <p><code>let</code>: Prevents redeclaration within the same scope.</p>
+
+    <h4>Global Object:</h4>
+    <p><code>var</code>: Becomes a property of the global object.</p>
+    <p><code>let</code>: Does not become a global object property.</p>
+
+    <h4>Temporal Dead Zone (TDZ):</h4>
+    <p>
+      <code>var</code>: Hoisted and accessible anywhere, leading to confusion.
+    </p>
+    <p>
+      <code>let</code>: Hoisted but stays in TDZ until declared, preventing
+      early access.
+    </p>
+
     <script>
+      function checkSign(num) {
+        return num > 0 ? "positive" : num < 0 ? "negative" : "zero";
+      }
+      console.log(checkSign(-3));
+      console.log(checkSign(5));
+
+      console.log(checkSign(0));
+
       var shoppingList = [
         ["Apples", 5],
         ["Bananas", 10],
