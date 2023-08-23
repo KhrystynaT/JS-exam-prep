@@ -138,7 +138,57 @@
         Expected output : 1 2 4
       </code>
     </pre></p>
+    <h3>Write it concise</h3>
+    <p>
+      <pre>
+        <code>
+          //Instead of 
+          const createHuman = (name, age, gender) => {
+            return {
+              name: name,
+              age:age,
+              gener:gender
+            };
+
+          }
+          // we can write:
+          const createHuman =(name,age,gender ) => ({ name,age,gender });
+        </code>
+      </pre>
+    </p>
+<hr>
+<h3>Getters and Setters</h3>
+<h4>Getter</h4>
+<p>A getter is a method that is used to retrieve the value of a property from an object. When you access a property with a getter, the function defined as the getter is called, and its return value is used as the property value.</p>
+<h4>Setter</h4>
+<p> A setter is a method that is used to set the value of a property in an object. When you assign a value to a property with a setter, the function defined as the setter is called, allowing you to perform custom actions before setting the value.
+
+</p>
+<hr>
     <script>
+      const person = {
+        firstName: "John",
+        lastName: "Doe",
+        
+        // Getter for fullName
+        get fullName() {
+          return this.firstName + " " + this.lastName;
+        },
+        
+        // Setter for fullName
+        set fullName(value) {
+          const [first, last] = value.split(" ");
+          this.firstName = first;
+          this.lastName = last;
+        }
+      };
+      
+      console.log(person.fullName); // Output: "John Doe"
+      
+      person.fullName = "Jane Smith";
+      console.log(person.firstName); // Output: "Jane"
+      console.log(person.lastName);  // Output: "Smith"
+      
       const [z,x, ,y] = [1,2,3,4,5,6];
         console.log(z,x,y);
       const sum = (function () {
