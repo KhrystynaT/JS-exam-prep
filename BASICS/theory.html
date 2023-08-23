@@ -110,6 +110,23 @@
       <code>let</code>: Hoisted but stays in TDZ until declared, preventing
       early access.
     </p>
+    <h3>The rest operator</h3>
+    <pre>
+      <code>
+  function sum(...numbers) {
+    return numbers.reduce((total, num) => total + num, 0);
+  }
+  
+  console.log(sum(1, 2, 3, 4)); // Output: 10
+      </code>
+    </pre>
+
+    <p>
+      In this example, the <code>sum</code> function uses the rest operator to
+      gather all the arguments passed to the function into an array called
+      <code>numbers</code>. It then calculates the sum of the numbers using the
+      <code>reduce</code> method.
+    </p>
 
     <script>
       const sum = (function () {
@@ -118,6 +135,8 @@
         };
       })();
       console.log(sum(1, 2, 3));
+      console.log(sum(1, 2, 3, 8));
+
       const increment = (function () {
         return function increment(number, value = 1) {
           return number + value;
