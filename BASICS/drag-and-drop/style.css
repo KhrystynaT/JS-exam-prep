@@ -6,8 +6,29 @@
 .container {
   width: 100%;
   min-height: 100vh;
-  background: #052d1b;
+  background: #b1f5d88d;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+#left,
+#right {
+  background: #cbf2e18d;
+  width: 300px;
+  min-height: 400px;
+  margin: 20px;
+  border: 2px dotted #6fae904e;
+}
+#left img {
+  margin: 5px 10px 10px 10px;
+}
+.list {
+  border: 1px dashed #48565075;
+  background: #a4edce8d;
+  height: 60px;
+  margin: 30px;
+  color: black;
+  display: flex;
+  align-items: center;
+  cursor: grab;
 }
