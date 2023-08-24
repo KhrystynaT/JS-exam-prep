@@ -19,7 +19,8 @@
   margin: 20px;
   border: 2px dotted #6fae904e;
 }
-#left img {
+#left img,
+#right img {
   margin: 5px 10px 10px 10px;
 }
 .list {
