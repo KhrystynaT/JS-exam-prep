@@ -6,10 +6,27 @@ body {
   background-position: center;
   width: 100vw;
   height: 100vh;
+  font-family: "Mooli", sans-serif;
+  font-size: 18px;
 }
 #main {
   min-width: 120px;
   min-height: 100px;
+}
+#input {
+  /* i dont like th white background*/
+  background-color: transparent;
+  width: 95%;
+  min-height: 25px;
+  margin-bottom: 12px;
+  padding: 8px;
+}
+#input::placeholder {
+  font-family: "Mooli", sans-serif;
+  font-size: 18px;
+}
+#messages {
+  color: rgb(26, 37, 21);
 }
 /* Apply a background image or color for the glass effect */
 .glass-container {
