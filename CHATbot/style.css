@@ -1,1 +1,36 @@
-/*style*/
+body {
+  background-color: #dfe2deb8;
+  background-image: url("https://img.freepik.com/premium-photo/digital-technology-abstract-background_7247-1828.jpg");
+  background-size: cover; /* Cover will make the image cover the entire container */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+}
+#main {
+  min-width: 120px;
+  min-height: 100px;
+}
+/* Apply a background image or color for the glass effect */
+.glass-container {
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+  backdrop-filter: blur(5px); /* Apply a blur effect to the background */
+  border-radius: 10px; /* Rounded corners for the container */
+  padding: 20px; /* Add some padding for content */
+  width: 300px; /* Adjust the width as needed */
+  margin: 40px auto; /* Center the container horizontally */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+/* Style for text inside the glass container */
+.glass-container p {
+  color: #333; /* Text color */
+  font-size: 18px; /* Font size */
+}
+
+/* Style for headings inside the glass container */
+.glass-container h2 {
+  color: #222; /* Heading color */
+  font-size: 24px; /* Font size */
+  margin-top: 0; /* Remove default margin */
+}
